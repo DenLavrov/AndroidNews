@@ -3,7 +3,8 @@ package com.example.myapplication
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.myapplication.ui.screens.MainScreen
+import com.example.myapplication.ui.screens.main.MainScreen
+import com.example.myapplication.ui.theme.NewsTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -12,7 +13,9 @@ class MainActivity : ComponentActivity() {
         setTheme(R.style.Theme_MyApplication)
         super.onCreate(savedInstanceState)
         setContent {
-            MainScreen()
+            NewsTheme {
+                MainScreen()
+            }
         }
     }
 }
